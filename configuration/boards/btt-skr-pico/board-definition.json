@@ -1,0 +1,86 @@
+{
+	"$schema": "../board-definition.schema.json",
+	"manualFileName": "manual.pdf",
+	"boardImageFileName": "board.png",
+	"name": "SKR Pico",
+	"manufacturer": "BIGTREETECH",
+	"id": "btt-skr-pico",
+	"firmwareBinaryName": "firmware-skr-pico.uf2",
+	"compileScript": "compile.sh",
+	"flashScript": "flash.sh",
+	"documentationLink": "https://os.ratrig.com/docs/boards/btt/skr-pico",
+	"driverCount": 4,
+	"driverVoltages": [24],
+	"fourPinFanConnectorCount": 0,
+	"hasMcuTempSensor": true,
+	"dfu": {
+		"flashDevice": "0483:df11",
+		"dfuBootImage": "dfubooting.png",
+		"instructions": [
+			"Connect the board via USB to the Raspberry Pi",
+			"Add the jumper to BOOT as shown in the picture",
+			"Make sure the board is powered on",
+			"If the board was already connected and powered when you inserted the jumper, click the reset button on the board."
+		],
+		"hasBoot0Jumper": true
+	},
+
+	"integratedDrivers": {
+		"x": "BTT-TMC2209-13",
+		"y": "BTT-TMC2209-13",
+		"z": "BTT-TMC2209-13",
+		"extruder": "BTT-TMC2209-13"
+	},
+	"motorSlots": {
+		"X": {
+			"title": "X",
+			"enable_pin": "gpio12",
+			"step_pin": "gpio11",
+			"dir_pin": "gpio10",
+			"uart_pin": "gpio9",
+			"tx_pin": "gpio8",
+			"uart_address": "0",
+			"cs_pin": "null",
+			"diag_pin": "gpio4",
+			"endstop_pin": "gpio4"
+		},
+		"Y": {
+			"title": "Y",
+			"enable_pin": "gpio7",
+			"step_pin": "gpio6",
+			"dir_pin": "gpio5",
+			"uart_pin": "gpio9",
+			"tx_pin": "gpio8",
+			"uart_address": "2",
+			"cs_pin": "null",
+			"diag_pin": "gpio3",
+			"endstop_pin": "gpio3"
+		},
+		"Z": {
+			"title": "Z",
+			"enable_pin": "gpio2",
+			"step_pin": "gpio19",
+			"dir_pin": "gpio28",
+			"uart_pin": "gpio9",
+			"tx_pin": "gpio8",
+			"uart_address": "1",
+			"cs_pin": "null",
+			"diag_pin": "gpio25",
+			"endstop_pin": "gpio25"
+		},
+		"E": {
+			"title": "E",
+			"enable_pin": "gpio15",
+			"step_pin": "gpio14",
+			"dir_pin": "gpio13",
+			"uart_pin": "gpio9",
+			"tx_pin": "gpio8",
+			"uart_address": "3",
+			"cs_pin": "null",
+			"diag_pin": "gpio16",
+			"endstop_pin": "gpio16"
+		}
+	},
+	"sdFileName": "",
+	"hasQuirksFiles": true
+}
